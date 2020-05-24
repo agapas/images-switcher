@@ -2,8 +2,8 @@ import React from 'react';
 import './ToggleSwitch.css';
 
 const ToggleSwitch = ({ isOn, handleToggle }) => {
-    const fromEvent = isOn ? "scrolling" : "mouse hover";
-    const toEvent = isOn ? "mouse hover" : "scrolling";
+    const fromEvent = isOn ? "scrolling" : "mouse over";
+    const toEvent = isOn ? "mouse over" : "scrolling";
     return (
         <div className="toggle-switch">
             <input
@@ -19,7 +19,7 @@ const ToggleSwitch = ({ isOn, handleToggle }) => {
             >
                 <span className="switch-button" />
             </label>
-            <label className="switch-label">{`Switch ${fromEvent} to ${toEvent}`}</label>
+            <label className="switch-label">{`Switch ${fromEvent} event to ${toEvent}`}</label>
         </div>
     );
 };
