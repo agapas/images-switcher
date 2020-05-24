@@ -1,19 +1,19 @@
 import React from 'react';
 import './ToggleSwitch.css';
 
-const ToggleSwitch = ({ isOn, handleToggle }) => {
-    const fromEvent = isOn ? "scrolling" : "mouse over";
-    const toEvent = isOn ? "mouse over" : "scrolling";
+const ToggleSwitch = ({ checked, onChange }) => {
+    const fromEvent = checked ? "scrolling" : "mouse over";
+    const toEvent = checked ? "mouse over" : "scrolling";
     return (
         <div className="toggle-switch">
             <input
                 id="switch-checkbox"
                 type="checkbox"
-                checked={isOn}
-                onChange={handleToggle}
+                checked={checked}
+                onChange={onChange}
             />
             <label
-                style={{ background: isOn && "black" }}
+                style={{ background: checked && "black" }}
                 className="switch-button-back"
                 htmlFor="switch-checkbox"
             >

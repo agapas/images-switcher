@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
-import ToggleSwitch from "./components/ToggleSwitch";
 import ImageChangeOnMouseOver from "./components/ImageChangeOnMouseOver";
+import ToggleController from "./components/toggle/ToggleController";
 
 const paths = [
   [require('./images/bw/1.jpg'), require('./images/color/1.jpg')],
@@ -10,13 +10,9 @@ const paths = [
 ];
 
 function App() {
-  const [value, setValue] = useState(false);
   return (
     <div className="App">
-      <ToggleSwitch
-        isOn={value}
-        handleToggle={() => setValue(!value)}
-      />
+      <ToggleController />
       <ImageChangeOnMouseOver paths={paths} />
     </div>
   );
