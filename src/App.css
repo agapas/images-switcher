@@ -1,4 +1,4 @@
-.App {
+.app {
   padding: 20px;
   background-color: lightgrey;
 }
@@ -9,9 +9,26 @@ img {
   margin: 5px;
 }
 
-.mouseOverImages {
+.mouse-over-images {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.images-source {
+  margin-top: 20px;
+  font-size: small;
+}
+
+.images-source a {
+  padding-left: 5px;
+}
+
+.images-source a:link, .images-source a:visited {
+  text-decoration: none;
+}
+
+.images-source a:hover, .images-source a:active {
+  text-decoration: underline;
 }

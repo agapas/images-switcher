@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import ImageChangeOnMouseOver from "./components/ImageChangeOnMouseOver";
+import ImagesSource from "./components/ImagesSource";
 import ToggleController from "./components/toggle/ToggleController";
 
 const paths = [
@@ -12,11 +13,14 @@ const paths = [
   [require('./images/primary/6.jpg'), require('./images/secondary/6.jpg')],
 ];
 
+const imagesSource = "https://pixabay.com/";
+
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <ToggleController />
       <ImageChangeOnMouseOver paths={paths} />
+      <ImagesSource source={imagesSource} />
     </div>
   );
 }
