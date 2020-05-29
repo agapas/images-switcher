@@ -1,5 +1,5 @@
 import React from "react";
-import OnScrollImage from "../src/OnScrollImage";
+import OnScrollImage from "./OnScrollImage";
 
 const ImageChangeOnScroll = () => {
     const speakersIds = [187, 1530, 1124];

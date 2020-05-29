@@ -1,8 +1,7 @@
 import React from 'react';
 import './App.css';
-import ImageChangeOnMouseOver from "./components/ImageChangeOnMouseOver";
+import ImagesController from "./components/ImagesController";
 import ImagesSource from "./components/ImagesSource";
-import ToggleController from "./components/toggle/ToggleController";
 
 const paths = [
   [require('./images/primary/1.jpg'), require('./images/secondary/1.jpg')],
@@ -18,8 +17,7 @@ const imagesSource = "https://pixabay.com/";
 function App() {
   return (
     <div className="app">
-      <ToggleController />
-      <ImageChangeOnMouseOver paths={paths} />
+      <ImagesController paths={paths} />
       <ImagesSource source={imagesSource} />
     </div>
   );
