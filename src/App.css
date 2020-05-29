@@ -1,3 +1,17 @@
 .App {
   padding: 20px;
+  background-color: lightgrey;
+}
+
+img {
+  width: 640px;
+  height: 426px;
+  margin: 5px;
+}
+
+.mouseOverImages {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }

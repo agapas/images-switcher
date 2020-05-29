@@ -1,6 +1,7 @@
 .toggle-switch {
     display: flex;
-    margin-bottom: 20px;
+    justify-content: center;
+    padding: 30px 0 40px;
 }
 
 .toggle-switch input {

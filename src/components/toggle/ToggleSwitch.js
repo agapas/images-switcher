@@ -13,7 +13,6 @@ const ToggleSwitch = ({ checked, onChange }) => {
                 onChange={onChange}
             />
             <label
-                style={{ background: checked && "black" }}
                 className="switch-button-back"
                 htmlFor="switch-checkbox"
             >
