@@ -37,7 +37,7 @@ const ImagesController = ({ paths }) => {
           onChange={onChangeEvent}
         />
       </div>
-      <ImagesContent paths={paths} primaryByDefault={primaryByDefault} event={fromEvent} />
+      <ImagesContent event={fromEvent} primaryByDefault={primaryByDefault} paths={paths} />
     </div>
   );
 }

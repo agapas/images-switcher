@@ -8,19 +8,13 @@ const getIndexes = (primaryByDefault) => {
     return { primaryIndex, secondaryIndex };
 };
 
-const getEventComponent = (event, index, primaryImg, secondaryImg) => {
-    return (event === "scrolling"
-        ? <OnScrollImage key={index} primaryImg={primaryImg} secondaryImg={secondaryImg} alt="" />
-        : <OnMouseOverImage key={index} primaryImg={primaryImg} secondaryImg={secondaryImg} alt="" />
-    );
-};
-
-const ImagesContent = ({ paths, primaryByDefault, event }) => {
+const ImagesContent = ({ event, primaryByDefault, paths }) => {
+    const EventComponent = event === "scrolling" ? OnScrollImage : OnMouseOverImage;
     const { primaryIndex, secondaryIndex } = getIndexes(primaryByDefault);
     return (
         <div className="mouse-over-images">
             {paths.map((p, i) => {
-                return getEventComponent(event, i, p[primaryIndex], p[secondaryIndex]);
+                return <EventComponent key={i} primaryImg={p[primaryIndex]} secondaryImg={p[secondaryIndex]} alt="" />;
             })}
         </div>
     );
