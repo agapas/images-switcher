@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import ToggleSwitch from "./toggle/ToggleSwitch";
 import ImagesContent from "./ImagesContent";
+import ToggleSwitch from "./ToggleSwitch";
 
 const ImagesController = ({ paths }) => {
   const [scrollingChecked, setScrollingChecked] = useState(false);

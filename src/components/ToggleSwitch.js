@@ -1,5 +1,4 @@
 import React from 'react';
-import './ToggleSwitch.css';
 
 const ToggleSwitch = ({ checked, label, className, onChange }) => {
     const id = `checkbox-${className}`;
