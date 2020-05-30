@@ -35,8 +35,7 @@ const OnScrollImage = ({ primaryImg, secondaryImg }) => {
             ref={imageRef}
             src={inView ? secondaryImg : primaryImg}
             alt=""
-            width="350"
-            height="350"
+            style={{ opacity: inView ? 1 : 0.5, width: 550, height: 366 }}
         />
     );
 };

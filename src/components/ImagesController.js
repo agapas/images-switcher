@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import ToggleSwitch from "./toggle/ToggleSwitch";
-import ImageChangeOnMouseOver from "./mouse-over/ImageChangeOnMouseOver";
+import ImagesContent from "./ImagesContent";
 
 const ImagesController = ({ paths }) => {
-  const [eventsChecked, setEventsChecked] = useState(false);
+  const [scrollingChecked, setScrollingChecked] = useState(false);
   const [allImagesChecked, setAllImagesChecked] = useState(false);
-  const [primaryByDefault, setPrimaryByDefault] = useState(false);
+  const [primaryByDefault, setPrimaryByDefault] = useState(true);
 
-  const fromEvent = eventsChecked ? "scrolling" : "mouse over";
-  const toEvent = eventsChecked ? "mouse over" : "scrolling";
+  const fromEvent = scrollingChecked ? "scrolling" : "mouse over";
+  const toEvent = scrollingChecked ? "mouse over" : "scrolling";
 
   const onChangeAllImages = () => {
     setAllImagesChecked(!allImagesChecked);
@@ -16,7 +16,7 @@ const ImagesController = ({ paths }) => {
   }
 
   const onChangeEvent = () => {
-    setEventsChecked(!eventsChecked);
+    setScrollingChecked(!scrollingChecked);
   }
 
   return (
@@ -31,13 +31,13 @@ const ImagesController = ({ paths }) => {
         />
         <ToggleSwitch
           key="2"
-          checked={eventsChecked}
+          checked={scrollingChecked}
           className="switch-event"
           label={`Switch ${fromEvent} event to ${toEvent}`}
           onChange={onChangeEvent}
         />
       </div>
-      <ImageChangeOnMouseOver paths={paths} primaryByDefault={primaryByDefault} />
+      <ImagesContent paths={paths} primaryByDefault={primaryByDefault} event={fromEvent} />
     </div>
   );
 }
