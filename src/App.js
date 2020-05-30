@@ -3,7 +3,7 @@ import './App.css';
 import ImagesController from "./components/ImagesController";
 import ImagesSource from "./components/ImagesSource";
 
-const paths = [
+export const paths = [
   [require('./images/primary/1.jpg'), require('./images/secondary/1.jpg')],
   [require('./images/primary/2.jpg'), require('./images/secondary/2.jpg')],
   [require('./images/primary/3.jpg'), require('./images/secondary/3.jpg')],
@@ -12,7 +12,7 @@ const paths = [
   [require('./images/primary/6.jpg'), require('./images/secondary/6.jpg')],
 ];
 
-const imagesSource = "https://pixabay.com/";
+export const imagesSource = "https://pixabay.com/";
 
 function App() {
   return (
