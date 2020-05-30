@@ -12,7 +12,7 @@ const ImagesContent = ({ event, primaryByDefault, paths }) => {
     const EventComponent = event === "scrolling" ? OnScrollImage : OnMouseOverImage;
     const { primaryIndex, secondaryIndex } = getIndexes(primaryByDefault);
     return (
-        <div className="mouse-over-images">
+        <div className="images-content">
             {paths.map((p, i) => {
                 return <EventComponent key={i} primaryImg={p[primaryIndex]} secondaryImg={p[secondaryIndex]} alt="" />;
             })}

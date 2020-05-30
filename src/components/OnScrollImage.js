@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useCallback, useState } from "react";
 
 const OnScrollImage = ({ primaryImg, secondaryImg }) => {
-    // primaryImg is bw image, secondaryImg is color image
+    // using useRef here is just for practicing React Hooks
     const imageRef = useRef(null);
     const [isLoading, setIsLoading] = useState(true);
 
@@ -35,7 +35,7 @@ const OnScrollImage = ({ primaryImg, secondaryImg }) => {
             ref={imageRef}
             src={inView ? secondaryImg : primaryImg}
             alt=""
-            style={{ opacity: inView ? 1 : 0.5, width: 550, height: 366 }}
+            style={{ opacity: inView ? 1 : 0.5 }}
         />
     );
 };
