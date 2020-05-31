@@ -1,7 +1,7 @@
 import React from 'react';
-import './App.css';
-import ImagesController from "./components/ImagesController";
-import ImagesSource from "./components/ImagesSource";
+import 'App.css';
+import ImagesController from "components/ImagesController";
+import ImagesSource from "components/ImagesSource";
 
 export const paths = [
   [require('./images/primary/1.jpg'), require('./images/secondary/1.jpg')],

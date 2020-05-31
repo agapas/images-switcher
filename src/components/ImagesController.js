@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import ImagesContent from "./ImagesContent";
 import ToggleSwitch from "./ToggleSwitch";
 

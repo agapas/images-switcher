@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const ToggleSwitch = ({ checked, label, className, onChange }) => {
     const id = `checkbox-${className}`;
