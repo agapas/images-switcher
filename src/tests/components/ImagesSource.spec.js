@@ -1,6 +1,6 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import ImagesSource from '../../components/ImagesSource';
+import React from "react";
+import { shallow } from "enzyme";
+import ImagesSource from "../../components/ImagesSource";
 
 describe("ImagesSource", () => {
     const getComp = (url) => shallow(<ImagesSource source={url} />);

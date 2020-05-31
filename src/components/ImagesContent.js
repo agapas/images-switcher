@@ -2,7 +2,7 @@ import React from "react";
 import OnScrollImage from "./OnScrollImage";
 import OnMouseOverImage from "./OnMouseOverImage";
 
-const getIndexes = (primaryByDefault) => {
+export const getIndexes = (primaryByDefault) => {
     const primaryIndex = primaryByDefault ? 0 : 1;
     const secondaryIndex = primaryByDefault ? 1 : 0;
     return { primaryIndex, secondaryIndex };

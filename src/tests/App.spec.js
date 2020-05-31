@@ -1,8 +1,8 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import App, { paths, imagesSource as source } from '../App';
+import React from "react";
+import { shallow } from "enzyme";
+import App, { paths, imagesSource as source } from "../App";
 import ImagesController from "../components/ImagesController";
-import ImagesSource from '../components/ImagesSource';
+import ImagesSource from "../components/ImagesSource";
 
 describe("App", () => {
     const comp = shallow(<App />);
