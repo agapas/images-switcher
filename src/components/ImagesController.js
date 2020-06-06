@@ -1,11 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ImagesContent from "./ImagesContent";
 import ToggleSwitch from "./ToggleSwitch";
 
 const ImagesController = ({ paths }) => {
   const [scrollingChecked, setScrollingChecked] = useState(false);
   const [allImagesChecked, setAllImagesChecked] = useState(false);
-  const [primaryByDefault, setPrimaryByDefault] = useState(true);
+  // const [primaryByDefault, setPrimaryByDefault] = useState(true);
+  const [primaryByDefault, setPrimaryByDefault] = useState(false);
+
+  // useEffect is used here just for practicing React Hooks
+  // to skip it enable line 8
+  useEffect(() => setPrimaryByDefault(true), []);
 
   const fromEvent = scrollingChecked ? "scrolling" : "mouse over";
   const toEvent = scrollingChecked ? "mouse over" : "scrolling";
