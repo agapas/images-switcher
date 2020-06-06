@@ -23,14 +23,14 @@ const ImagesController = ({ paths }) => {
     <div className="images-controller">
       <div className="toggles">
         <ToggleSwitch
-          key="1"
+          key="all-images"
           checked={allImagesChecked}
           className="switch-all-images"
           label="Switch all images"
           onChange={onChangeAllImages}
         />
         <ToggleSwitch
-          key="2"
+          key="event"
           checked={scrollingChecked}
           className="switch-event"
           label={`Switch ${fromEvent} event to ${toEvent}`}
