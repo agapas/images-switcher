@@ -4,6 +4,7 @@ const OnScrollImage = ({ primaryImg, secondaryImg }) => {
     // using useRef here is just for practicing React Hooks
     const imageRef = useRef(null);
     const [isLoading, setIsLoading] = useState(true);
+    const [inView, setInView] = useState(false);
 
     const scrollHandler = useCallback(() => {
         setInView(() => {
@@ -19,8 +20,6 @@ const OnScrollImage = ({ primaryImg, secondaryImg }) => {
             window.removeEventListener("scroll", scrollHandler);
         });
     }, [isLoading, scrollHandler]);
-
-    const [inView, setInView] = useState(false);
 
     const isInView = () => {
         if (imageRef.current) {
