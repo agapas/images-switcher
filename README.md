@@ -3,6 +3,7 @@ Simple app to switch images on toggle, mouse hover or by scrolling the page.
 The project is made with React (to practice the React Hooks), in a Functional Programming like approach.
 Unit tests made with Jest and Enzyme.
 
+Demo page visible at: [http://agapas.github.io/images-switcher](http://agapas.github.io/images-switcher).
 
 The project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -10,7 +11,7 @@ The project was bootstrapped with [Create React App](https://github.com/facebook
 ## Running the project
 
 - go to project directory,
-- run `npm i` to install all dependencies (just a first time),
+- run `npm i` to install packages (just a first time),
 - run `npm start` (it runs the app in the development mode and opens [http://localhost:3000](http://localhost:3000) automatically to view in the browser).
 
 
