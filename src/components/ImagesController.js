@@ -2,6 +2,11 @@ import React, { useState, useEffect } from "react";
 import ImagesContent from "./ImagesContent";
 import ToggleSwitch from "./ToggleSwitch";
 
+const isMobileSize = () => {
+  const w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+  return w < 480;
+};
+
 const ImagesController = ({ paths }) => {
   const [scrollingChecked, setScrollingChecked] = useState(false);
   const [allImagesChecked, setAllImagesChecked] = useState(false);
@@ -9,11 +14,13 @@ const ImagesController = ({ paths }) => {
   const [primaryByDefault, setPrimaryByDefault] = useState(false);
 
   // useEffect is used here just for practicing React Hooks
-  // to skip it enable line 8
+  // to skip it enable line 13
   useEffect(() => setPrimaryByDefault(true), []);
 
-  const fromEvent = scrollingChecked ? "scrolling" : "mouse over";
-  const toEvent = scrollingChecked ? "mouse over" : "scrolling";
+  const isMobile = isMobileSize();
+  const mouseOverOrTouchEvent = isMobile ? "touch" : "mouse over";
+  const fromEvent = scrollingChecked ? "scrolling" : mouseOverOrTouchEvent;
+  const toEvent = scrollingChecked ? mouseOverOrTouchEvent : "scrolling";
 
   const onChangeAllImages = () => {
     setAllImagesChecked(!allImagesChecked);
@@ -25,7 +32,7 @@ const ImagesController = ({ paths }) => {
   }
 
   return (
-    <div className="images-controller">
+    <div className={`images-controller ${isMobile ? "mobile" : ""}`}>
       <div className="toggles">
         <ToggleSwitch
           key="all-images"
@@ -42,7 +49,7 @@ const ImagesController = ({ paths }) => {
           onChange={onChangeEvent}
         />
       </div>
-      <ImagesContent event={fromEvent} primaryByDefault={primaryByDefault} paths={paths} />
+      <ImagesContent event={fromEvent} primaryByDefault={primaryByDefault} paths={paths} isMobile={isMobile} />
     </div>
   );
 }

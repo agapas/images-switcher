@@ -5,7 +5,6 @@
 
 .images-content {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -14,6 +13,39 @@ img {
     width: 550px;
     height: 366px;
     margin: 5px;
+}
+
+/* large screens */
+/*
+    1650 = 3 x 550 (550 is the img width)
+    Style added to not have 3 columns on larger screens,
+    so the scrolling effect could work with so small amount of images
+*/
+@media all and (min-width: 1650px) {
+    .images-content {
+        flex-direction: column;
+    }
+    img {
+        width: 100vh;
+        height: 65vh;
+        margin: 10px auto;
+    }
+}
+
+.mobile .images-content {
+    flex-direction: column;
+}
+.mobile img {
+    width: 90vw;
+    height: 60vw;
+    margin: 5px auto;
+}
+.mobile .toggles {
+    padding: 10px 0;
+    flex-direction: column;
+}
+.mobile .toggle-switch {
+    padding: 10px;
 }
 
 .images-source {
