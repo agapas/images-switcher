@@ -1,5 +1,5 @@
 # images-switcher
-Simple app to switch images on toggle, mouse hover or by scrolling the page.
+Simple app to switch images on toggle, mouse hover (or touch on mobiles) and by scrolling the page.
 The project is made with React (to practice the React Hooks), in a Functional Programming like approach.
 Unit tests made with Jest and Enzyme.
 
